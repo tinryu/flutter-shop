@@ -5,6 +5,7 @@ import 'pages/login_page.dart';
 import 'pages/home/home_page.dart';
 import 'pages/register_page.dart';
 import 'pages/forgot_page.dart';
+import 'pages/search/search_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,13 +20,15 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: MyTheme.lightTheme(context),
       // darkTheme: MyTheme.darkTheme(context),
-      initialRoute: MyRoutes.homeRoute,
+      debugShowCheckedModeBanner: false,
+      initialRoute: MyRoutes.searchRoute,
       routes: {
         "/": (context) => const LoginPage(),
         MyRoutes.homeRoute: (context) => const HomePage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.registerRoute: (context) => const RegisterPage(),
         MyRoutes.forgotRoute: (context) => const Forgot(),
+        MyRoutes.searchRoute: (context) => const SearchPage(),
       },
     );
   }
